@@ -1,3 +1,7 @@
 #poligon td {
   border: 1px solid #ccc;
 }
+
+.item {
+  background-color: green;
+}
