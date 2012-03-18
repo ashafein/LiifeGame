@@ -8,27 +8,57 @@
 	<title>Game Of Life</title>
 
 	<link rel="stylesheet" href="css/main.css" />
-
-	<script src="GUI.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui-1.8.18.custom.css" />
 	<script src="jquery-1.7.1.min.js"></script>
+	<script src="jquery-ui-1.8.18.custom.min.js"></script>
+	<script src="GUI.js"></script>
 	<script src="Game_of_Life.js"></script>
 </head>
 
 <body>
+<div class="controls_wrap">
 	<div id="controls">
-		<div id="world_size">
-			<input type="text" id='Row' value='10' />
-			<input type="text" id='Col' value='10' />
-			<button id="start" value="OK" >Ok</button>
+		<div id="world_size" class="">
+			<div class="input_wrap">
+				<input type="text" id='Row'  value='10' />
+				<input type="text" id='Col' value='10' />
+				<label id='row' for="amount">Maximum price:</label>
+				<div id="slider-range-min"></div>
+				<label id='col' for="amount">Maximum price:</label>
+				<div id="slider-range-min2"></div>
+				<div class="button_wrap" id="start">
+					Применить
+				</div>
+			</div>
+			<div class="next_button hide" id="next1">
+				
+			</div>
 		</div>
-		<div id='generate_items'>
-			<button id="rand" >Random</button>
-			<button id="go" >Go</button>
+		<div id='generate_items' class="">
+			<div class="input_wrap">
+				<div class="button_wrap" id="rand">
+					Заселить
+				</div>
+			</div>
+			<div class="next_button" id="next2">
+				
+			</div>
+		</div>
+		<div id="Go" class="">
+			<div class = "header_column header_column_left">
+				<p>Jewcy<em>Life</em></p>
+				<span>В поисках Израиля</span><br>
+			</div>
+			<div class="button_wrap" id="go">
+					הכביש!
+			</div>
 		</div>
 	</div>
+</div>
+<div class="poligon_wrap">
 	<table id="poligon">
-
 	</table>
+</div>
 </body>
 
 </html>

@@ -121,8 +121,8 @@ GameLife = function(config) {
 			for(var x = 0; x < iCol; x++, ii++) {
 				var td = document.createElement('TD');
 				td.id = y + '_' + x;
-				td.width = 16;
-				td.height = 16;
+				td.width = 30;
+				td.height = 30;
 				td.row = y;
 				td.col = x;
 				if(world[y][x]) {
@@ -153,8 +153,8 @@ GameLife = function(config) {
 			for(var x = 0; x < iCol; x++, ii++) {
 				var td = document.createElement('TD');
 				td.id = y + '_' + x;
-				td.width = 16;
-				td.height = 16;
+				td.width = 30;
+				td.height = 30;
 				td.row = y;
 				td.col = x;
 				if(world[y][x]) {
@@ -168,7 +168,13 @@ GameLife = function(config) {
 		
 		$('td').click(function() {
 			world[this.row][this.col] = !world[this.row][this.col];
-			$(this).toggleClass('item', 0);
+			console.log(world);
+			 if ($(this).is('.item')) {
+				$(this).removeClass('item');
+			} else {
+				$(this).addClass('item');
+			}
+			//$(this).
 		});
 }
 }
@@ -182,6 +188,7 @@ $(document).ready(function() {
 			area: $('#poligon'),
 		});
 		zaz.init();
+		$('#next1').removeClass('hide');
 		//console.log($('#Row').val());
 		//DrawWorldTable($('#poligon'), , $('#Col').val());
 	});
