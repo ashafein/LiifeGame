@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<title>Game Of Life</title>
-
-	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/jquery-ui-1.8.18.custom.css" />
+	<link rel="stylesheet" href="css/main.css" />
 	<script src="jquery-1.7.1.min.js"></script>
 	<script src="jquery-ui-1.8.18.custom.min.js"></script>
 	<script src="GUI.js"></script>
@@ -17,7 +17,7 @@
 
 <body>
 <div class="controls_wrap">
-	<div id="controls">
+	<div id="controls" class="">
 		<div id="world_size" class="">
 			<div class="input_wrap">
 				<input type="text" id='Row'  value='10' />
@@ -36,6 +36,12 @@
 		</div>
 		<div id='generate_items' class="">
 			<div class="input_wrap">
+				<input type="text" id='Time'  value='10' />
+				<input type="text" id='Plot' value='10' />
+				<label id='time' for="amount">Maximum price:</label>
+				<div id="slider-range-min3"></div>
+				<label id='plot' for="amount">Maximum price:</label>
+				<div id="slider-range-min4"></div>
 				<div class="button_wrap" id="rand">
 					Заселить
 				</div>

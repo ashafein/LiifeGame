@@ -174,7 +174,6 @@ GameLife = function(config) {
 			} else {
 				$(this).addClass('item');
 			}
-			//$(this).
 		});
 }
 }
@@ -188,17 +187,14 @@ $(document).ready(function() {
 			area: $('#poligon'),
 		});
 		zaz.init();
+		$('#poligon').show('slow');
 		$('#next1').removeClass('hide');
-		//console.log($('#Row').val());
-		//DrawWorldTable($('#poligon'), , $('#Col').val());
 	});
 	
 	$('#rand').click(function() {
 		zaz.initRandom();
 	});
 	$('#go').click(function() {
-		//zaz.start();
 		zaz.doStep();
 	});
-  //DrawWorldTable($('#poligon'), 10, 10);
 });
