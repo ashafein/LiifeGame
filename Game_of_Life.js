@@ -168,7 +168,6 @@ GameLife = function(config) {
 		
 		$('td').click(function() {
 			world[this.row][this.col] = !world[this.row][this.col];
-			console.log(world);
 			 if ($(this).is('.item')) {
 				$(this).removeClass('item');
 			} else {
@@ -195,6 +194,7 @@ $(document).ready(function() {
 		zaz.initRandom();
 	});
 	$('#go').click(function() {
+		$("#audio-player")[0].play();
 		zaz.doStep();
 	});
 });
